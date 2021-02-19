@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./assets/styles/logo_header.css" />
+    <link rel="stylesheet" href="./assets/styles/navigation.css" />
+    <title>Lonely Fans</title>
+  </head>
+  <body>
+    <header class="logocontainer">
+      <!-- <img class="logo" src="./assets/images/logo.png" /> -->
+      <ul class="iconstop">
+        <li class="icontop">
+          <a href="#"><i class="fa fa-shopping-cart"></i></a>
+        </li>
+        <li class="icontop">
+          <a href="#"><i class="fa fa-heart"></i></a>
+        </li>
+        <li class="icontop">
+          <a href="#"><i class="fa fa-tasks"></i></a>
+        </li>
+      </ul>
+    </header>
+    <nav>
+      <ul class="navbar">
+        <li class="nav"><a href="./index.html">Shop all</a></li>
+        <li class="nav"><a href="./blogs.html">T-shirts</a></li>
+        <li class="nav"><a href="./register.html">Hoodies</a></li>
+        <li class="nav"><a href="#about">Beanies</a></li>
+        <li class="nav"><a href="#about">Bucket hat</a></li>
+        <li class="nav"><a href="#about">Socks</a></li>
+        <!-- <li class="navsearch"> -->
+        <!-- </li> -->
+      </ul>
+      <form id="search-product" onsubmit="event.preventDefault(); searchBlog()">
+        <input type="text" name="search" placeholder="search" />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </nav>
+  </body>
+</html>

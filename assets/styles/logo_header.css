@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  scroll-behavior: smooth;
+}
+
+.logocontainer {
+  background-image: url(../images/logo.png);
+  background-position: center 15%;
+  background-size: 65%;
+}
+
+.logocontainer > img {
+  display: block;
+}
+
+.iconstop {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.icontop > a {
+  /* position: absolute; */
+  /* bottom: 50px;
+  right: 50px; */
+  padding: 20px;
+  color: white;
+  font-size: 22px;
+}
+
+.logo {
+  height: 75%;
+  width: 100%;
+}
