@@ -1,0 +1,20 @@
+.gender {
+  padding: 30px 0;
+}
+
+.images {
+  display: flex;
+}
+
+.image {
+  list-style-type: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.image img {
+  width: 100%;
+  max-height: 50vh;
+  object-fit: cover;
+  object-position: top;
+}

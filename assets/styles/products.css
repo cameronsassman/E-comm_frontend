@@ -1,0 +1,51 @@
+.across {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.filter {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 250px;
+}
+
+.side-bar {
+  margin-bottom: 30px;
+}
+
+.side-bar h2 {
+  font-weight: bold;
+  margin: 0;
+  margin-top: 20px;
+  position: relative;
+}
+
+.heading {
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+.heading h3 {
+  color: rgb(58, 219, 120);
+  margin: 0;
+  font-weight: normal;
+  border-bottom: 1px solid #272727;
+  display: inline-block;
+}
+
+.side-bar ul {
+  margin-bottom: 0;
+}
+
+.catergory li {
+  line-height: 40px;
+  border-bottom: 1px solid #dbdbdb;
+  list-style-type: none;
+}
+
+.catergory a {
+  color: #272727;
+  width: 100%;
+  font-size: 15px;
+  display: inline-block;
+}

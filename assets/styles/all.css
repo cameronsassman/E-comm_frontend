@@ -1,0 +1,21 @@
+body {
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  padding-left: 10%;
+  margin-left: auto;
+  padding-right: 10%;
+  margin-right: auto;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}

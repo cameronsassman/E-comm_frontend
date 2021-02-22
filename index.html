@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- css sheets -->
     <link rel="stylesheet" href="./assets/styles/logo_header.css" />
     <link rel="stylesheet" href="./assets/styles/navigation.css" />
+    <link rel="stylesheet" href="./assets/styles/footer.css" />
+    <link rel="stylesheet" href="./assets/styles/all.css" />
+    <link rel="stylesheet" href="./assets/styles/sale.css" />
+    <link rel="stylesheet" href="./assets/styles/carousel.css" />
+    <link rel="stylesheet" href="./assets/styles/gender-card.css" />
     <title>Lonely Fans</title>
   </head>
   <body>
@@ -33,7 +40,6 @@
         <li class="nav"><a href="./blogs.html">T-shirts</a></li>
         <li class="nav"><a href="./register.html">Hoodies</a></li>
         <li class="nav"><a href="#about">Beanies</a></li>
-        <li class="nav"><a href="#about">Bucket hat</a></li>
         <li class="nav"><a href="#about">Socks</a></li>
         <!-- <li class="navsearch"> -->
         <!-- </li> -->
@@ -43,5 +49,160 @@
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
     </nav>
+    <section class="gender">
+      <div class="container">
+        <ul class="images">
+          <li class="image">
+            <img src="./assets/images/Christopher_Robin_male.jpg" />
+          </li>
+          <li class="image">
+            <img src="./assets/images/Christopher_Robin_male.jpg" />
+          </li>
+          <li class="image">
+            <img src="./assets/images/Christopher_Robin_male.jpg" />
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="carousel-container">
+        <!-- carousel -->
+        <div id="carousel">
+          <!-- container -->
+          <div id="carousel-container"></div>
+          <!-- bullets -->
+          <div id="carousel-bullets"></div>
+
+          <!-- buttons -->
+          <button id="carousel-left" onclick="changeSlide(-1)">
+            <i class="fas fa-angle-left"></i>
+          </button>
+          <button id="carousel-right" onclick="changeSlide(1)">
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h2>SALE</h2>
+        <ul class="card-container">
+          <li class="card">
+            <img
+              src="./assets/images/beanie_winnie_pink.png"
+              alt="Beanie"
+              class="card-image"
+            />
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod
+              provident amet distinctio aspernatur suscipit perspiciatis
+              exercitationem veniam maiores nemo nesciunt! Nemo ipsum sequi
+              porro eius? Praesentium itaque aliquam iure ut?
+            </p>
+            <p>ZAR</p>
+            <button>ADD</button>
+            <div class="cover">
+              <button class="text">add to cart</button>
+            </div>
+          </li>
+          <li class="card">
+            <img
+              src="./assets/images/beanie_winnie_pink.png"
+              alt="Beanie"
+              class="card-image"
+            />
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod
+              provident amet distinctio aspernatur suscipit perspiciatis
+              exercitationem veniam maiores nemo nesciunt! Nemo ipsum sequi
+              porro eius? Praesentium itaque aliquam iure ut?
+            </p>
+            <p>ZAR</p>
+            <button>ADD</button>
+          </li>
+          <li class="card">
+            <img
+              src="./assets/images/beanie_winnie_pink.png"
+              alt="Beanie"
+              class="card-image"
+            />
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod
+              provident amet distinctio aspernatur suscipit perspiciatis
+              exercitationem veniam maiores nemo nesciunt! Nemo ipsum sequi
+              porro eius? Praesentium itaque aliquam iure ut?
+            </p>
+            <p>ZAR</p>
+            <button>ADD</button>
+          </li>
+          <li class="card">
+            <img
+              src="./assets/images/beanie_winnie_pink.png"
+              alt="Beanie"
+              class="card-image"
+            />
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod
+              provident amet distinctio aspernatur suscipit perspiciatis
+              exercitationem veniam maiores nemo nesciunt! Nemo ipsum sequi
+              porro eius? Praesentium itaque aliquam iure ut?
+            </p>
+            <p>ZAR</p>
+            <button>ADD</button>
+          </li>
+          <li class="card">
+            <img
+              src="./assets/images/beanie_winnie_pink.png"
+              alt="Beanie"
+              class="card-image"
+            />
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod
+              provident amet distinctio aspernatur suscipit perspiciatis
+              exercitationem veniam maiores nemo nesciunt! Nemo ipsum sequi
+              porro eius? Praesentium itaque aliquam iure ut?
+            </p>
+            <p>ZAR</p>
+            <button>ADD</button>
+          </li>
+          <li class="card">
+            <img
+              src="./assets/images/beanie_winnie_pink.png"
+              alt="Beanie"
+              class="card-image"
+            />
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod
+              provident amet distinctio aspernatur suscipit perspiciatis
+              exercitationem veniam maiores nemo nesciunt! Nemo ipsum sequi
+              porro eius? Praesentium itaque aliquam iure ut?
+            </p>
+            <p>ZAR</p>
+            <button>ADD</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <div class="container">
+        <h1>
+          Lonely Fans
+          <!-- <img src="./assets/images/headerlogo.png" style="height: 40%" /> -->
+        </h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis
+          animi ipsam inventore id facilis fugit unde quibusdam, error enim
+          pariatur vero tenetur porro, repellat quos veniam eaque explicabo ex
+          voluptate.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta
+          quibusdam dolor enim, debitis cum tempora accusamus eveniet ea sit
+          similique dolores necessitatibus, quisquam aliquam temporibus ratione
+          fugit animi ipsa possimus!
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
