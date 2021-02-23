@@ -15,15 +15,36 @@
   width: 30%;
   text-align: center;
   margin-bottom: 15px;
-  background-color: #eeedee;
+  background-color: #eff2f7;
   margin-top: 15px;
-  padding-left: 15px;
   opacity: 1;
   position: relative;
 }
 
-.card-container .card:hover {
-  /* opacity: 0; */
+.card .details {
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #fff;
+}
+
+.card .details a {
+  display: inline-block;
+  width: 100%;
+  padding: 15px 0;
+  color: #272727;
+  letter-spacing: 2px;
+  font-size: 12px;
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 10px;
+}
+
+.font-fam {
+  font-family: "Montserrat", sans-serif;
+}
+
+.card .details span {
+  font-size: 10px;
+  letter-spacing: 2px;
 }
 
 .cover {

@@ -24,9 +24,6 @@ body {
 }
 
 .icontop > a {
-  /* position: absolute; */
-  /* bottom: 50px;
-  right: 50px; */
   padding: 20px;
   color: white;
   font-size: 22px;
@@ -35,4 +32,25 @@ body {
 .logo {
   height: 75%;
   width: 100%;
+}
+
+.icontop a:link {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+.icontop a:visited {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+.icontop a:hover {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+.icontop a:active {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
 }
