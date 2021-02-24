@@ -56,7 +56,7 @@ select {
   background-color: #ffffff;
 }
 
-label {
+.lbl {
   padding: 15px 0;
   color: #272727;
   letter-spacing: 2px;

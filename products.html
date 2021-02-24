@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./assets/styles/all.css" />
     <link rel="stylesheet" href="./assets/styles/products.css" />
     <link rel="stylesheet" href="./assets/styles/sale.css" />
+    <link rel="stylesheet" href="./assets/styles/login-form.css" />
     <title>Lonely Fans</title>
   </head>
   <body>
@@ -28,6 +29,45 @@
         <li class="icontop">
           <a href="#"><i class="fa fa-heart"></i></a>
         </li>
+        <li
+          class="icontop"
+          onclick="document.getElementById('id01').style.display='block'"
+        >
+          <i class="fa fa-user"></i>
+        </li>
+
+        <div id="id01" class="modal">
+          <form class="modal-content" method="post">
+            <!-- <div class="imgcontainer">
+              
+            </div> -->
+            <div class="login-container">
+              <span
+                onclick="document.getElementById('id01').style.display='none'"
+                class="close"
+                title="Close Modal"
+                >&times;</span
+              >
+              <label for="uname"><b>Username</b></label>
+              <input
+                type="text"
+                placeholder="Enter Username"
+                name="uname"
+                required
+              />
+
+              <label for="psw"><b>Password</b></label>
+              <input
+                type="password"
+                placeholder="Enter Password"
+                name="psw"
+                required
+              />
+
+              <button type="submit" class="bttn">Login</button>
+            </div>
+          </form>
+        </div>
       </ul>
     </header>
     <nav>
@@ -91,11 +131,12 @@
         </div>
         <ul class="card-container">
           <li class="card">
-            <img
-              src="./assets/images/beanie_winnie_pink.png"
-              alt="Beanie"
-              class="card-image"
-            />
+            <a href="./product.html">
+              <img
+                src="./assets/images/beanie_winnie_pink.png"
+                alt="Beanie"
+                class="card-image"
+            /></a>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod
               provident amet distinctio aspernatur suscipit perspiciatis
@@ -204,5 +245,6 @@
       </div>
     </footer>
     <script src="./assets/scripts/collapse.js"></script>
+    <script src="./assets/scripts/login.js"></script>
   </body>
 </html>

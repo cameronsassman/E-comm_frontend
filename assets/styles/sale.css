@@ -7,8 +7,9 @@
 }
 
 .card-image {
-  width: 20em;
+  width: 100%;
   height: 20em;
+  object-fit: contain;
 }
 
 .card {
@@ -19,6 +20,10 @@
   margin-top: 15px;
   opacity: 1;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
 }
 
 .card .details {
@@ -56,12 +61,4 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
-}
-
-.card-container .card img ~ p:hover {
-  opacity: 1;
-}
-
-.card-container:hover .cover {
-  opacity: 1;
 }

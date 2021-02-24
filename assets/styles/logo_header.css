@@ -20,13 +20,14 @@ body {
 .iconstop {
   display: flex;
   justify-content: flex-end;
-  padding: 20px;
+  list-style-type: none;
 }
 
-.icontop > a {
-  padding: 20px;
+.icontop {
+  margin: 20px;
   color: white;
   font-size: 22px;
+  cursor: pointer;
 }
 
 .logo {

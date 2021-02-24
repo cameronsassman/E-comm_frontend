@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./assets/styles/footer.css" />
     <link rel="stylesheet" href="./assets/styles/all.css" />
     <link rel="stylesheet" href="./assets/styles/product.css" />
+    <link rel="stylesheet" href="./assets/styles/login-form.css" />
     <title>Lonely Fans</title>
   </head>
   <body>
@@ -27,6 +28,45 @@
         <li class="icontop">
           <a href="#"><i class="fa fa-heart"></i></a>
         </li>
+        <li
+          class="icontop"
+          onclick="document.getElementById('id01').style.display='block'"
+        >
+          <i class="fa fa-user"></i>
+        </li>
+
+        <div id="id01" class="modal">
+          <form class="modal-content" method="post">
+            <!-- <div class="imgcontainer">
+              
+            </div> -->
+            <div class="login-container">
+              <span
+                onclick="document.getElementById('id01').style.display='none'"
+                class="close"
+                title="Close Modal"
+                >&times;</span
+              >
+              <label for="uname"><b>Username</b></label>
+              <input
+                type="text"
+                placeholder="Enter Username"
+                name="uname"
+                required
+              />
+
+              <label for="psw"><b>Password</b></label>
+              <input
+                type="password"
+                placeholder="Enter Password"
+                name="psw"
+                required
+              />
+
+              <button type="submit" class="bttn">Login</button>
+            </div>
+          </form>
+        </div>
       </ul>
     </header>
     <nav>
@@ -63,16 +103,18 @@
           </li>
           <li>
             <form>
-              <label>Size:</label>
+              <label class="lbl">Size:</label>
               <select>
-                <option>Please select...</option>
+                <option value="" disabled selected hidden>
+                  Please select...
+                </option>
                 <option>X Small</option>
                 <option>Small</option>
                 <option>Medium</option>
                 <option>Large</option>
                 <option>X Large</option>
               </select>
-              <label>Qunatity:</label>
+              <label class="lbl">Qunatity:</label>
               <select>
                 <option>1</option>
                 <option>2</option>
@@ -107,5 +149,6 @@
         </p>
       </div>
     </footer>
+    <script src="./assets/scripts/login.js"></script>
   </body>
 </html>
