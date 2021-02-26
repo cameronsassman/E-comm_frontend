@@ -7,31 +7,44 @@
     <title>add products</title>
   </head>
   <body>
-    <form method="post">
-      <h3>Student Information</h3>
+    <form
+      id="create_form"
+      onsubmit="event.preventDefault(); addProduct()"
+    >
+      <h3>Products</h3>
       product name<br />
-      <input type="text" name="product name" placeholder="product name" /><br />
+      <input type="text" name="name" placeholder="product name" /><br />
 
       description<br />
       <textarea name="description" placeholder="description"></textarea><br />
 
-      type<br />
+      style<br />
       <input
         type="text"
-        name="type"
-        placeholder="male/female/toddler/unisex"
+        name="style"
+        placeholder="style"
       /><br />
 
-      catagory<br />
-      <input type="text" name="catagory" placeholder="catagory" /><br />
+      character<br />
+      <input type="text" name="character" placeholder="catagory" /><br />
 
       size<br />
       <input type="text" name="size" placeholder="size" /><br />
 
+      price<br />
+      <input type="text" name="price" placeholder="price" /><br />
+
       colour<br />
       <input type="text" name="colour" placeholder="colour" /><br />
 
+      gender<br />
+      <input type="text" name="gender" placeholder="gender" /><br />
+
+      image<br />
+      <input type="text" name="image" placeholder="image link" /><br />
+  </br>
       <input type="submit" value="submit" /><br />
     </form>
   </body>
+  <script src="./assets/scripts/add-products.js"></script>
 </html>

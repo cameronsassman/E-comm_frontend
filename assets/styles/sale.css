@@ -62,3 +62,17 @@
   -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+  .card-image {
+    height: 5em;
+  }
+  .card .details {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .card .details a {
+    padding: 10px 0;
+    margin-bottom: 5px;
+  }
+}

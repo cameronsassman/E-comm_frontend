@@ -57,3 +57,37 @@ button {
   border: none;
   cursor: pointer;
 }
+
+.menu-toggle {
+  color: #fff;
+  cursor: pointer;
+  top: -80px;
+  width: 45px;
+  position: absolute;
+  line-height: 45px;
+  height: 45px;
+  float: right;
+  margin: 0px 0;
+  text-align: center;
+  padding: 0 0px;
+  background: rgba(0, 0, 0, 0.9);
+  right: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+  }
+
+  .nav a {
+    padding: 5px;
+  }
+
+  #search-product {
+    display: none;
+  }
+}

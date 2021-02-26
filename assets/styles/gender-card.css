@@ -18,3 +18,13 @@
   object-fit: cover;
   object-position: top;
 }
+
+@media screen and (max-width: 768px) {
+  .gender {
+    padding: 15px 0;
+  }
+  .image {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
