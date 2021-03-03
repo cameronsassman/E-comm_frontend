@@ -1,0 +1,44 @@
+.contact-form {
+  display: flex;
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4%;
+}
+
+.input-fields,
+.msg {
+  width: 50%;
+}
+
+.input-fields .input,
+.msg textarea {
+  margin: 10px 0;
+  background: transparent;
+  border: 0px;
+  border-bottom: 2px solid #c5ecfd;
+  padding: 10px;
+  color: #000000;
+  width: 100%;
+}
+
+.msg textarea {
+  height: 160px;
+  outline: none;
+}
+
+.btn {
+  background: rgb(0, 238, 255);
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+}

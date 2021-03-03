@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="./assets/styles/footer.css" />
     <link rel="stylesheet" href="./assets/styles/all.css" />
     <link rel="stylesheet" href="./assets/styles/sale.css" />
-    <link rel="stylesheet" href="./assets/styles/carousel.css" />
     <link rel="stylesheet" href="./assets/styles/gender-card.css" />
     <link rel="stylesheet" href="./assets/styles/login-form.css" />
     <link rel="stylesheet" href="./assets/styles/sign-up.css" />
+    <link rel="stylesheet" href="./assets/styles/contact.css" />
     <title>Lonely Fans</title>
   </head>
   <body>
-    <header class="logocontainer">
+    <header class="logocontainer" href="./index.html">
       <ul class="iconstop">
         <li class="icontop">
           <a href="#"><i class="fa fa-shopping-cart"></i></a>
@@ -47,72 +47,62 @@
                 >&times;</span
               >
               <label for="uname"><b>Username</b></label>
-              <input
-                type="text"
-                placeholder="Enter Username"
-                name="uname"
-                required
-              />
+              <input type="text" placeholder="Enter Username" name="uname" />
 
               <label for="psw"><b>Password</b></label>
-              <input
-                type="password"
-                placeholder="Enter Password"
-                name="psw"
-                required
-              />
+              <input type="password" placeholder="Enter Password" name="psw" />
 
               <button type="submit" class="bttn">Login</button>
               <button
                 class="bttnsu"
                 onclick="document.getElementById('su01').style.display='block'"
+                type="button"
               >
                 Sign up
               </button>
-              <div id="su01" class="modalsu">
-                <form method="post">
-                  <div class="signup-container">
-                    <span
-                      onclick="document.getElementById('su01').style.display='none'"
-                      class="closesu"
-                      title="Close Modal"
-                      >&times;</span
-                    >
-                    <label for="uname"><b>Name</b></label>
-                    <input
-                      type="text"
-                      placeholder="Enter Name"
-                      name="name"
-                      required
-                    />
-                    <label for="psw"><b>Surname</b></label>
-                    <input
-                      type="text"
-                      placeholder="Enter Surname"
-                      name="sname"
-                      required
-                    />
-                    <label for="psw"><b>Email</b></label>
-                    <input
-                      type="text"
-                      placeholder="Enter email"
-                      name="email"
-                      required
-                    />
-                    <label for="psw"><b>Password</b></label>
-                    <input
-                      type="password"
-                      placeholder="Enter Password"
-                      name="psw"
-                      required
-                    />
-
-                    <button type="submit" class="bttnsu">Sign up</button>
-                  </div>
-                </form>
-              </div>
             </div>
           </form>
+          <div id="su01" class="modalsu">
+            <form
+              id="createAcc"
+              onsubmit="event.preventDefault(); createAccount()"
+            >
+              <div class="signup-container">
+                <span
+                  onclick="document.getElementById('su01').style.display='none'"
+                  class="closesu"
+                  title="Close Modal"
+                  >&times;</span
+                >
+                <label for="name"><b>Name</b></label>
+                <input
+                  type="text"
+                  placeholder="Enter Name"
+                  name="name"
+                  required
+                />
+
+                <label for="surname"><b>Surname</b></label>
+                <input type="text" placeholder="Enter Surname" name="surname" />
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter email" name="email" />
+                <label for="username"><b>Username</b></label>
+                <input
+                  type="text"
+                  placeholder="Enter username"
+                  name="username"
+                />
+                <label for="password"><b>Password</b></label>
+                <input
+                  type="password"
+                  placeholder="Enter Password"
+                  name="password"
+                />
+
+                <button type="submit" class="bttnsu">Sign up</button>
+              </div>
+            </form>
+          </div>
         </div>
       </ul>
     </header>
@@ -133,88 +123,21 @@
       <div class="container">
         <ul class="images">
           <li class="image">
-            <img src="./assets/images/Christopher_Robin_male.jpg" />
+            <img src="./assets/images/hoodies/eeyore_hoodie_pink-.png" />
           </li>
           <li class="image">
-            <img src="./assets/images/Christopher_Robin_male.jpg" />
+            <img src="./assets/images/hoodies/eeyore_hoodie_pink-.png" />
           </li>
           <li class="image">
-            <img src="./assets/images/Christopher_Robin_male.jpg" />
+            <img src="./assets/images/hoodies/eeyore_hoodie_pink-.png" />
           </li>
         </ul>
       </div>
     </section>
     <section>
       <div class="container">
-        <h2>SALE</h2>
-        <ul class="card-container">
-          <li class="card">
-            <img
-              src="./assets/images/beanie_winnie_pink.png"
-              alt="Beanie"
-              class="card-image"
-            />
-            <p class="details">
-              <a href="#"> Winnie the pooh Beanie ~ pink </a>
-              <span class="font-fam">ZAR</span>
-            </p>
-          </li>
-          <li class="card">
-            <img
-              src="./assets/images/beanie_winnie_pink.png"
-              alt="Beanie"
-              class="card-image"
-            />
-            <p class="details">
-              <a href="#"> Winnie the pooh Beanie ~ pink </a>
-              <span class="font-fam">ZAR</span>
-            </p>
-          </li>
-          <li class="card">
-            <img
-              src="./assets/images/beanie_winnie_pink.png"
-              alt="Beanie"
-              class="card-image"
-            />
-            <p class="details">
-              <a href="#"> Winnie the pooh Beanie ~ pink </a>
-              <span class="font-fam">ZAR</span>
-            </p>
-          </li>
-          <li class="card">
-            <img
-              src="./assets/images/beanie_winnie_pink.png"
-              alt="Beanie"
-              class="card-image"
-            />
-            <p class="details">
-              <a href="#"> Winnie the pooh Beanie ~ pink </a>
-              <span class="font-fam">ZAR</span>
-            </p>
-          </li>
-          <li class="card">
-            <img
-              src="./assets/images/beanie_winnie_pink.png"
-              alt="Beanie"
-              class="card-image"
-            />
-            <p class="details">
-              <a href="#"> Winnie the pooh Beanie ~ pink </a>
-              <span class="font-fam">ZAR</span>
-            </p>
-          </li>
-          <li class="card">
-            <img
-              src="./assets/images/beanie_winnie_pink.png"
-              alt="Beanie"
-              class="card-image"
-            />
-            <p class="details">
-              <a href="#"> Winnie the pooh Beanie ~ pink </a>
-              <span class="font-fam">ZAR</span>
-            </p>
-          </li>
-        </ul>
+        <h2>NEW</h2>
+        <ul class="card-container" id="cardList"></ul>
       </div>
     </section>
 
@@ -224,20 +147,34 @@
           Lonely Fans
           <!-- <img src="./assets/images/headerlogo.png" style="height: 40%" /> -->
         </h1>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis
-          animi ipsam inventore id facilis fugit unde quibusdam, error enim
-          pariatur vero tenetur porro, repellat quos veniam eaque explicabo ex
-          voluptate.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta
-          quibusdam dolor enim, debitis cum tempora accusamus eveniet ea sit
-          similique dolores necessitatibus, quisquam aliquam temporibus ratione
-          fugit animi ipsa possimus!
-        </p>
+        <div class="coninfo">
+          <form
+            class="contact-form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+          >
+            <div class="input-fields">
+              <input type="text" class="input" placeholder="Name" />
+              <input type="text" class="input" placeholder="Email Address" />
+              <input type="text" class="input" placeholder="Phone" />
+              <input type="text" class="input" placeholder="Subject" />
+            </div>
+            <div class="msg">
+              <textarea placeholder="Message"></textarea>
+              <button class="btn">send</button>
+            </div>
+          </form>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta
+            quibusdam dolor enim, debitis cum tempora accusamus eveniet ea sit
+            similique dolores necessitatibus, quisquam aliquam temporibus
+            ratione fugit animi ipsa possimus!
+          </p>
+        </div>
       </div>
     </footer>
+    <script src="./assets/scripts/index.js"></script>
     <script src="./assets/scripts/login.js"></script>
     <script src="./assets/scripts/sign_up.js"></script>
   </body>

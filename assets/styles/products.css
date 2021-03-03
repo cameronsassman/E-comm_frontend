@@ -7,7 +7,7 @@
 .filter {
   padding-left: 15px;
   padding-right: 15px;
-  width: 105vw;
+  width: 270vw;
 }
 
 .side-bar {
@@ -79,4 +79,10 @@
 
 .active:after {
   content: "\2212";
+}
+
+@media screen and (max-width: 768px) {
+  .filter {
+    padding-left: 0;
+  }
 }

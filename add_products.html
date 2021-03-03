@@ -7,26 +7,22 @@
     <title>add products</title>
   </head>
   <body>
-    <form
-      id="create_form"
-      onsubmit="event.preventDefault(); addProduct()"
-    >
+    <form id="create_form" onsubmit="event.preventDefault(); addProduct()">
       <h3>Products</h3>
       product name<br />
       <input type="text" name="name" placeholder="product name" /><br />
 
-      description<br />
-      <textarea name="description" placeholder="description"></textarea><br />
-
-      style<br />
-      <input
-        type="text"
-        name="style"
-        placeholder="style"
-      /><br />
-
       character<br />
       <input type="text" name="character" placeholder="catagory" /><br />
+
+      style<br />
+      <input type="text" name="style" placeholder="style" /><br />
+
+      gender<br />
+      <input type="text" name="gender" placeholder="gender" /><br />
+
+      colour<br />
+      <input type="text" name="colour" placeholder="colour" /><br />
 
       size<br />
       <input type="text" name="size" placeholder="size" /><br />
@@ -34,15 +30,11 @@
       price<br />
       <input type="text" name="price" placeholder="price" /><br />
 
-      colour<br />
-      <input type="text" name="colour" placeholder="colour" /><br />
-
-      gender<br />
-      <input type="text" name="gender" placeholder="gender" /><br />
+      description<br />
+      <input type="text" name="description" placeholder="description" /><br />
 
       image<br />
       <input type="text" name="image" placeholder="image link" /><br />
-  </br>
       <input type="submit" value="submit" /><br />
     </form>
   </body>

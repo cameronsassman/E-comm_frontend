@@ -87,3 +87,10 @@ span.pswsu {
   color: red;
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .signup-container {
+    margin-left: 0;
+    width: 100%;
+  }
+}

@@ -1,8 +1,25 @@
 footer {
   background-color: rgb(39, 39, 39);
   padding: 20px 0;
+  display: flex;
 }
 
 .foot {
   height: 300px;
+}
+
+.coninfo {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    background-color: rgb(39, 39, 39);
+    padding: 20px 0;
+    display: block;
+  }
+
+  .coninfo {
+    display: block;
+  }
 }

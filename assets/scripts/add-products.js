@@ -1,18 +1,18 @@
 function addProduct() {
-  const insert = document.getElementsByTagName("input");
+  const inputs = document.getElementsByTagName("input");
 
-  fetch("https://limitless-basin-17095.herokuapp.com/add-record/", {
+  fetch("http://127.0.0.1:5000/add-record/", {
     method: "POST",
     body: JSON.stringify({
-      name: insert[0].value,
-      character: insert[1].value,
-      style: insert[2].value,
-      gender: insert[3].value,
-      colour: insert[4].value,
-      size: insert[5].value,
-      price: insert[6].value,
-      description: insert[7].value,
-      image: insert[8].value,
+      name: inputs[0].value,
+      character: inputs[1].value,
+      style: inputs[2].value,
+      gender: inputs[3].value,
+      colour: inputs[4].value,
+      size: inputs[5].value,
+      price: inputs[6].value,
+      description: inputs[7].value,
+      image: inputs[8].value,
     }),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
@@ -22,6 +22,7 @@ function addProduct() {
     .then((json) => {
       console.log(json);
       alert("item successfully added");
-      document.getElementById("create_form").requestFullscreen();
+      document.getElementById("create_form").reset();
     });
 }
+// fetch("https://limitless-basin-17095.herokuapp.com/add-record/"
