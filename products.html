@@ -13,21 +13,48 @@
     <link rel="stylesheet" href="./assets/styles/logo_header.css" />
     <link rel="stylesheet" href="./assets/styles/navigation.css" />
     <link rel="stylesheet" href="./assets/styles/footer.css" />
+    <link rel="stylesheet" href="./assets/styles/cart.css" />
     <link rel="stylesheet" href="./assets/styles/all.css" />
     <link rel="stylesheet" href="./assets/styles/products.css" />
     <link rel="stylesheet" href="./assets/styles/sale.css" />
+    <link rel="stylesheet" href="./assets/styles/sign-up.css" />
     <link rel="stylesheet" href="./assets/styles/login-form.css" />
     <title>Lonely Fans</title>
   </head>
   <body>
     <header class="logocontainer">
-      <!-- <img class="logo" src="./assets/images/logo.png" /> -->
       <ul class="iconstop">
-        <li class="icontop">
-          <a href="#"><i class="fa fa-shopping-cart"></i></a>
+        <li
+          class="icontop"
+          onclick="document.getElementById('cart01').style.display='block'"
+        >
+          <a href="#"
+            ><i class="fa fa-shopping-cart"
+              ><label class="number" id="amount">0</label></i
+            ></a
+          >
         </li>
+        <div class="cartt" id="cart01">
+          <div class="cart-content">
+            <div class="cart-container">
+              <span
+                onclick="document.getElementById('cart01').style.display='none'"
+                class="close-cart"
+                title="Close Modal"
+                >&times;</span
+              >
+              <img src="./assets/images/beanies/beanie_winnie- .png" />
+              <div class="cart-info">
+                <p>heading</p>
+                <p>Price:</p>
+                <p>Size:</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <li class="icontop">
-          <a href="#"><i class="fa fa-heart"></i></a>
+          <i class="fa fa-heart"></i>
         </li>
         <li
           class="icontop"
@@ -37,10 +64,11 @@
         </li>
 
         <div id="id01" class="modal">
-          <form class="modal-content" method="post">
-            <!-- <div class="imgcontainer">
-              
-            </div> -->
+          <form
+            class="modal-content"
+            id="loginUser"
+            onsubmit="event.preventDefault(); loginForm()"
+          >
             <div class="login-container">
               <span
                 onclick="document.getElementById('id01').style.display='none'"
@@ -49,36 +77,85 @@
                 >&times;</span
               >
               <label for="uname"><b>Username</b></label>
-              <input
-                type="text"
-                placeholder="Enter Username"
-                name="uname"
-                required
-              />
+              <input type="text" placeholder="Enter Username" name="username" />
 
               <label for="psw"><b>Password</b></label>
               <input
                 type="password"
                 placeholder="Enter Password"
-                name="psw"
-                required
+                name="password"
               />
 
               <button type="submit" class="bttn">Login</button>
+              <button
+                class="bttnsu"
+                onclick="document.getElementById('su01').style.display='block'"
+                type="button"
+              >
+                Sign up
+              </button>
             </div>
           </form>
+          <div id="su01" class="modalsu">
+            <form
+              id="createAcc"
+              onsubmit="event.preventDefault(); createAccount()"
+            >
+              <div class="signup-container">
+                <span
+                  onclick="document.getElementById('su01').style.display='none'"
+                  class="closesu"
+                  title="Close Modal"
+                  >&times;</span
+                >
+                <label for="name"><b>Name</b></label>
+                <input
+                  type="text"
+                  placeholder="Enter Name"
+                  name="name"
+                  required
+                />
+
+                <label for="surname"><b>Surname</b></label>
+                <input type="text" placeholder="Enter Surname" name="surname" />
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter email" name="email" />
+                <label for="username"><b>Username</b></label>
+                <input
+                  type="text"
+                  placeholder="Enter username"
+                  name="username"
+                />
+                <label for="password"><b>Password</b></label>
+                <input
+                  type="password"
+                  placeholder="Enter Password"
+                  name="password"
+                />
+
+                <button type="submit" class="bttnsu">Sign up</button>
+              </div>
+            </form>
+          </div>
         </div>
       </ul>
     </header>
     <nav>
       <ul class="navbar">
-        <li class="nav"><a href="./index.html">Shop all</a></li>
-        <li class="nav"><a href="./blogs.html">T-shirts</a></li>
-        <li class="nav"><a href="./register.html">Hoodies</a></li>
-        <li class="nav"><a href="#about">Beanies</a></li>
-        <li class="nav"><a href="#about">Socks</a></li>
-        <!-- <li class="navsearch"> -->
-        <!-- </li> -->
+        <li class="nav"><a href="./index.html">Home</a></li>
+        <li class="nav"><a href="./products.html">Shop all</a></li>
+        <li class="nav">
+          <a href="./products.html?category=tshirt">T-shirts</a>
+        </li>
+        <li class="nav">
+          <a href="./products.html?category=hoodie">Hoodies</a>
+        </li>
+        <li class="nav">
+          <a href="./products.html?category=beanie">Beanies</a>
+        </li>
+        <li class="nav">
+          <a href="./products.html?category=socks">Socks</a>
+        </li>
       </ul>
       <form id="search-product" onsubmit="event.preventDefault(); searchBlog()">
         <input type="text" name="search" placeholder="search" />
@@ -94,132 +171,68 @@
               <h3>Catagories</h3>
             </div>
             <ul class="catergory">
-              <li><a href="#">Mens</a></li>
-              <li><a href="#">Women</a></li>
+              <li><a href="./products.html?gender=male">Mens</a></li>
+              <li><a href="./products.html?gender=female">Women</a></li>
+              <li><a href="./products.html?gender=unisex">Unisex</a></li>
               <li>
                 <button type="button" class="collapse">Character</button>
                 <ul>
-                  <li><a href="#">Winnie</a></li>
-                  <li><a href="#">Scar</a></li>
-                  <li><a href="#">Donald Duck</a></li>
-                  <li><a href="#">Roo</a></li>
-                  <li><a href="#">Kanga</a></li>
-                  <li><a href="#">Tigger</a></li>
-                  <li><a href="#">Eeyore</a></li>
-                  <li><a href="#">Owl</a></li>
-                  <li><a href="#">Jasmine</a></li>
-                  <li><a href="#">Christopher Robin</a></li>
-                  <li><a href="#">Rabbit</a></li>
-                  <li><a href="#">Charlie Brown</a></li>
-                  <li><a href="#">SpongeBob</a></li>
-                  <li><a href="#">Anna</a></li>
+                  <li>
+                    <a href="./products.html?character=winnie the pooh"
+                      >Winnie</a
+                    >
+                  </li>
+                  <li><a href="./products.html?character=scar">Scar</a></li>
+                  <li>
+                    <a href="./products.html?character=donald duck"
+                      >Donald Duck</a
+                    >
+                  </li>
+                  <li><a href="./products.html?character=roo">Roo</a></li>
+                  <li><a href="./products.html?character=kanga">Kanga</a></li>
+                  <li><a href="./products.html?character=tigger">Tigger</a></li>
+                  <li><a href="./products.html?character=eeyore">Eeyore</a></li>
+                  <li><a href="./products.html?character=owl">Owl</a></li>
+                  <li>
+                    <a href="./products.html?character=jasmine">Jasmine</a>
+                  </li>
+                  <li>
+                    <a href="./products.html?character=christopher robin"
+                      >Christopher Robin</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./products.html?character=rabbit">Rabbit</a>
+                  </li>
+                  <li>
+                    <a href="./products.html?character=charlie brown"
+                      >Charlie Brown</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./products.html?character=SpongeBob">SpongeBob</a>
+                  </li>
+                  <li><a href="./products.html?character=Anna">Anna</a></li>
                 </ul>
               </li>
-              <li><a href="#">Sale</a></li>
               <li>
                 <button type="button" class="collapse">Size</button>
                 <ul>
-                  <li class="content"><a href="#">Small</a></li>
-                  <li class="content"><a href="#">Medium</a></li>
-                  <li class="content"><a href="#">Large</a></li>
+                  <li class="content">
+                    <a href="./products.html?size=s">Small</a>
+                  </li>
+                  <li class="content">
+                    <a href="./products.html?size=m">Medium</a>
+                  </li>
+                  <li class="content">
+                    <a href="./products.html?size=l">Large</a>
+                  </li>
                 </ul>
               </li>
             </ul>
           </div>
         </div>
-        <ul class="card-container" id="cardList">
-          <!-- <li class="card">
-            <a href="./product.html">
-              <img
-                src="./assets/images/beanie_winnie_pink.png"
-                alt="Beanie"
-                class="card-image"
-            /></a>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod
-              provident amet distinctio aspernatur suscipit perspiciatis
-              exercitationem veniam maiores nemo nesciunt! Nemo ipsum sequi
-              porro eius? Praesentium itaque aliquam iure ut?
-            </p>
-            <p>ZAR</p>
-            <button>ADD</button>
-          </li>
-          <li class="card">
-            <img
-              src="./assets/images/beanie_winnie_pink.png"
-              alt="Beanie"
-              class="card-image"
-            />
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod
-              provident amet distinctio aspernatur suscipit perspiciatis
-              exercitationem veniam maiores nemo nesciunt! Nemo ipsum sequi
-              porro eius? Praesentium itaque aliquam iure ut?
-            </p>
-            <p>ZAR</p>
-            <button>ADD</button>
-          </li>
-          <li class="card">
-            <img
-              src="./assets/images/beanie_winnie_pink.png"
-              alt="Beanie"
-              class="card-image"
-            />
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod
-              provident amet distinctio aspernatur suscipit perspiciatis
-              exercitationem veniam maiores nemo nesciunt! Nemo ipsum sequi
-              porro eius? Praesentium itaque aliquam iure ut?
-            </p>
-            <p>ZAR</p>
-            <button>ADD</button>
-          </li>
-          <li class="card">
-            <img
-              src="./assets/images/beanie_winnie_pink.png"
-              alt="Beanie"
-              class="card-image"
-            />
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod
-              provident amet distinctio aspernatur suscipit perspiciatis
-              exercitationem veniam maiores nemo nesciunt! Nemo ipsum sequi
-              porro eius? Praesentium itaque aliquam iure ut?
-            </p>
-            <p>ZAR</p>
-            <button>ADD</button>
-          </li>
-          <li class="card">
-            <img
-              src="./assets/images/beanie_winnie_pink.png"
-              alt="Beanie"
-              class="card-image"
-            />
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod
-              provident amet distinctio aspernatur suscipit perspiciatis
-              exercitationem veniam maiores nemo nesciunt! Nemo ipsum sequi
-              porro eius? Praesentium itaque aliquam iure ut?
-            </p>
-            <p>ZAR</p>
-            <button>ADD</button>
-          </li>
-          <li class="card">
-            <img
-              src="./assets/images/beanie_winnie_pink.png"
-              alt="Beanie"
-              class="card-image"
-            />
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod
-              provident amet distinctio aspernatur suscipit perspiciatis
-              exercitationem veniam maiores nemo nesciunt! Nemo ipsum sequi
-              porro eius? Praesentium itaque aliquam iure ut?
-            </p>
-            <p>ZAR</p>
-            <button>ADD</button>
-          </li> -->
-        </ul>
+        <ul class="card-container" id="cardList"></ul>
       </div>
     </section>
     <footer class="foot">
@@ -245,5 +258,6 @@
     <script src="./assets/scripts/products.js"></script>
     <script src="./assets/scripts/collapse.js"></script>
     <script src="./assets/scripts/login.js"></script>
+    <script src="./assets/scripts/sign_up.js"></script>
   </body>
 </html>

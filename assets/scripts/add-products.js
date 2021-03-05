@@ -25,4 +25,3 @@ function addProduct() {
       document.getElementById("create_form").reset();
     });
 }
-// fetch("https://limitless-basin-17095.herokuapp.com/add-record/"

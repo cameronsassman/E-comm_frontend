@@ -22,17 +22,7 @@ if (params.has("productID")) {
               ${prdct.description}
             </p>
             <h3>Size: ${prdct.size}</h3>
-            <form>
-              <label class="lbl">Qunatity:</label>
-              <select>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </form>
-            <button class="button">
+            <button class="button" type="button"  onclick="add(${prdct.id})">
             ADD TO CART <i class="fa fa-shopping-cart"></i>
           </button>
           </div>

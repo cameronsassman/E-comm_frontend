@@ -1,3 +1,10 @@
+// Get data from URL
+const params = new URLSearchParams(window.location.search);
+let category = params.get("category");
+let gender = params.get("gender");
+let character = params.get("character");
+let size = params.get("size");
+
 function getProducts() {
   let list = document.getElementById("cardList");
 
@@ -5,11 +12,63 @@ function getProducts() {
     .then((res) => res.json())
     .then((data) => {
       data = shuffle(data);
-      data.forEach((sale, index) => {
-        console.log(index, sale);
-        let item = createItem(sale);
-        list.innerHTML += item;
-      });
+      console.log(data);
+      if (category) {
+        let filteredItems = data.filter((product) => {
+          console.log(product.style.toLowerCase(), category);
+
+          return product.style.toLowerCase() == category;
+        });
+        console.log(filteredItems);
+        filteredItems.forEach((sale, index) => {
+          console.log(index, sale);
+          let item = createItem(sale);
+          list.innerHTML += item;
+        });
+      } else if (character) {
+        let filteredItems = data.filter((product) => {
+          console.log(product.character.toLowerCase(), character);
+
+          return product.character.toLowerCase() == character;
+        });
+        console.log(filteredItems);
+        filteredItems.forEach((sale, index) => {
+          console.log(index, sale);
+          let item = createItem(sale);
+          list.innerHTML += item;
+        });
+      } else if (size) {
+        let filteredItems = data.filter((product) => {
+          console.log(product.size.toLowerCase(), size);
+
+          return product.size.toLowerCase() == size;
+        });
+        console.log(filteredItems);
+        filteredItems.forEach((sale, index) => {
+          console.log(index, sale);
+          let item = createItem(sale);
+          list.innerHTML += item;
+        });
+      } else if (gender) {
+        let filteredItems = data.filter((product) => {
+          console.log(product.gender.toLowerCase(), gender);
+
+          return product.gender.toLowerCase() == gender;
+        });
+        console.log(filteredItems);
+        filteredItems.forEach((sale, index) => {
+          console.log(index, sale);
+          let item = createItem(sale);
+          list.innerHTML += item;
+        });
+      } else {
+        data.forEach((sale, index) => {
+          console.log(index, sale);
+
+          let item = createItem(sale);
+          list.innerHTML += item;
+        });
+      }
     });
 }
 

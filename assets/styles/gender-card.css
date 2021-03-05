@@ -8,8 +8,8 @@
 
 .image {
   list-style-type: none;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .image img {
@@ -17,6 +17,23 @@
   max-height: 50vh;
   object-fit: cover;
   object-position: top;
+}
+
+.button {
+  border: none;
+  background-color: white;
+  color: black;
+  border: 2px solid #84aebf;
+  padding: 5px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  width: 100%;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-left: 15px;
 }
 
 @media screen and (max-width: 768px) {
