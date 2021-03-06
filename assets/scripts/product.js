@@ -5,7 +5,11 @@ const params = new URLSearchParams(window.location.search);
 const product_item = document.getElementById("product-item");
 
 if (params.has("productID")) {
-  fetch(`http://127.0.0.1:5000/show-record-item/${params.get("productID")}`)
+  fetch(
+    `https://limitless-basin-17095.herokuapp.com/show-record-item/${params.get(
+      "productID"
+    )}`
+  )
     .then((response) => response.json())
     .then((prdct) => {
       console.log(prdct);

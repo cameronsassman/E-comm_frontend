@@ -25,7 +25,7 @@
       <ul class="iconstop">
         <li
           class="icontop"
-          onclick="document.getElementById('cart01').style.display='block'"
+          onclick="document.getElementById('cart01').style.display='block'; renderCart()"
         >
           <a href="#"
             ><i class="fa fa-shopping-cart"
@@ -35,18 +35,15 @@
         </li>
         <div class="cartt" id="cart01">
           <div class="cart-content">
-            <div class="cart-container">
+            <div class="cart-container" id="cartContainer">
               <span
                 onclick="document.getElementById('cart01').style.display='none'"
                 class="close-cart"
                 title="Close Modal"
                 >&times;</span
               >
-              <img src="./assets/images/beanies/beanie_winnie- .png" />
-              <div class="cart-info">
-                <p>heading</p>
-                <p>Price:</p>
-                <p>Size:</p>
+              <div class="align-items">
+                </div>
               </div>
             </div>
           </div>

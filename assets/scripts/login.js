@@ -6,7 +6,7 @@ function loginForm() {
   let password = inputs[1].value;
 
   let users;
-  fetch("http://127.0.0.1:5000/show-users/")
+  fetch("https://limitless-basin-17095.herokuapp.com/show-users/")
     .then((response) => response.json())
     .then((json) => {
       console.log(json);

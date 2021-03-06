@@ -24,8 +24,13 @@
 
 .cart-container {
   padding: 16px;
-  display: flex;
+  display: block;
   background-color: white;
+}
+
+.align-items {
+  display: flex;
+  padding-bottom: 20px;
 }
 
 .cart-info {
@@ -59,6 +64,7 @@ span.psw {
   margin-left: 70%; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
   width: 25%; /* Could be more or less, depending on screen size */
+  display: block;
 }
 
 .cart-content img {

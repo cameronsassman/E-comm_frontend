@@ -8,7 +8,7 @@ let size = params.get("size");
 function getProducts() {
   let list = document.getElementById("cardList");
 
-  fetch("http://127.0.0.1:5000/show-records/")
+  fetch("https://limitless-basin-17095.herokuapp.com/show-records/")
     .then((res) => res.json())
     .then((data) => {
       data = shuffle(data);

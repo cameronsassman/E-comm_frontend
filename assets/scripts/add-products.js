@@ -1,7 +1,7 @@
 function addProduct() {
   const inputs = document.getElementsByTagName("input");
 
-  fetch("http://127.0.0.1:5000/add-record/", {
+  fetch("https://limitless-basin-17095.herokuapp.com/add-record/", {
     method: "POST",
     body: JSON.stringify({
       name: inputs[0].value,
