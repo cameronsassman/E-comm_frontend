@@ -67,6 +67,11 @@ span.psw {
   display: block;
 }
 
+.cart-content p {
+  font-size: 20px;
+  color: #969696;
+}
+
 .cart-content img {
   width: 20%;
 }

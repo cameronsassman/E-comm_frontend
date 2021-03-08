@@ -16,7 +16,7 @@ function add(prdct) {
   let cart = localStorage.getItem("cart");
   let cartList = JSON.parse(cart);
   console.log(cartList);
-  cartList ? cartList : (cartList = []);
+  cart ? cart : (cartList = []);
   console.log(cartList);
   document.getElementById("amount").innerHTML = cartList.length;
   cartList.push(prdct);
@@ -57,6 +57,7 @@ function renderCart() {
       });
 
       console.log(cartItems);
+      document.getElementById("cartContainer").innerHTML = "";
       cartItems.forEach((item) => {
         let cartItem = createCartItem(item);
         document.getElementById("cartContainer").innerHTML += cartItem;
@@ -67,12 +68,17 @@ function renderCart() {
 
 function createCartItem(prdct) {
   return `
+  <span
+                onclick="document.getElementById('cart01').style.display='none'"
+                class="close-cart"
+                title="Close Modal"
+                >&times;</span
+              >
   <div class="align-items">
   <img src=${prdct.image} />
           <div class="cart-info">
-            <p>${prdct.name}</p>
+            <h2>${prdct.name}</h2>
             <p>${prdct.price}</p>
-            <p>Size:${prdct.size}</p>
             </div>
             </div>`;
 }
