@@ -15,6 +15,9 @@ i = 0;
 function add(prdct) {
   let cart = localStorage.getItem("cart");
   let cartList = JSON.parse(cart);
+  console.log(cartList);
+  cartList ? cartList : (cartList = []);
+  console.log(cartList);
   document.getElementById("amount").innerHTML = cartList.length;
   cartList.push(prdct);
   console.log(cartList);
