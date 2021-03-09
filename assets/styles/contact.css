@@ -1,5 +1,6 @@
 .contact-form {
   display: flex;
+  padding-left: 20px;
 }
 
 .input-fields {
@@ -20,7 +21,7 @@
   border: 0px;
   border-bottom: 2px solid #c5ecfd;
   padding: 10px;
-  color: #000000;
+  color: white;
   width: 100%;
 }
 
@@ -30,7 +31,7 @@
 }
 
 .btn {
-  background: rgb(0, 238, 255);
+  background: #84aebf;
   text-align: center;
   padding: 15px;
   border-radius: 5px;

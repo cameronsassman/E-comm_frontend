@@ -27,7 +27,7 @@
       <ul class="iconstop">
         <li
           class="icontop"
-          onclick="document.getElementById('cart01').style.display='block'"
+          onclick="document.getElementById('cart01').style.display='block'; renderCart()"
         >
           <a href="#"
             ><i class="fa fa-shopping-cart"
@@ -37,20 +37,22 @@
         </li>
         <div class="cartt" id="cart01">
           <div class="cart-content">
-            <div class="cart-container">
+            <div class="cart-container" id="cartContainer">
               <span
                 onclick="document.getElementById('cart01').style.display='none'"
                 class="close-cart"
                 title="Close Modal"
                 >&times;</span
               >
-              <img src="./assets/images/beanies/beanie_winnie- .png" />
-              <div class="cart-info">
-                <p>heading</p>
-                <p>Price:</p>
-                <p>Size:</p>
-              </div>
+
+              <div class="align-items"></div>
             </div>
+            <div class="cart-total">
+              <h3>Total:</h3>
+            </div>
+            <button class="cart-button">
+              Check out <i class="fa fa-shopping-bag"></i>
+            </button>
           </div>
         </div>
         <li
@@ -91,6 +93,7 @@
               >
                 Sign up
               </button>
+              <button onclick="out()" class="bttn">Sign out</button>
             </div>
           </form>
           <div id="su01" class="modalsu">
@@ -192,7 +195,34 @@
     <footer class="foot">
       <div class="container">
         <h1>Lonely Fans</h1>
+        <h2>About</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta
+          debitis soluta expedita, sunt iusto saepe repellendus eius natus!
+          Facilis consequatur pariatur perferendis necessitatibus laudantium
+          assumenda quae minus deleniti obcaecati.
+        </p>
         <div class="coninfo">
+          <div class="about">
+            <h3>Character representation:</h3>
+            <ul>
+              <li>Winnie the pooh: Impulsive Eating Disorder</li>
+              <li>Piglet: Generalized Anxiety Disorder</li>
+              <li>Eeyore: Depressive Disorder</li>
+              <li>Rabbit: Obsessive Compulsive Disorder (OCD)</li>
+              <li>Owl: Dyslexia and Narcissistis Disorder</li>
+              <li>Tigger: Attention Deficit Hyperactivity Disorder (ADHD)</li>
+              <li>Kanga: Social Anxiety Disorder</li>
+              <li>Roo: Autism Spectrum Disorder</li>
+              <li>Christopher Robin: Schizophrenia</li>
+              <li>Scar: Anti-social Personality Disorder</li>
+              <li>Charlie Brown: Avoident Personality Disorder</li>
+              <li>SpongeBob Squarepants: Williams-Beuren Syndrome</li>
+              <li>Donald Duck: PTSD</li>
+              <li>Anna: Attention Deficit Hyperactivity Disorder (ADHD)</li>
+              <li>Jasmine: Bipolar Disorder</li>
+            </ul>
+          </div>
           <form
             class="contact-form"
             name="contact"
@@ -210,12 +240,6 @@
               <button class="btn">send</button>
             </div>
           </form>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta
-            quibusdam dolor enim, debitis cum tempora accusamus eveniet ea sit
-            similique dolores necessitatibus, quisquam aliquam temporibus
-            ratione fugit animi ipsa possimus!
-          </p>
         </div>
       </div>
     </footer>

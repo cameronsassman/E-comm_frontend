@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./assets/styles/footer.css" />
     <link rel="stylesheet" href="./assets/styles/all.css" />
     <link rel="stylesheet" href="./assets/styles/cart.css" />
+    <link rel="stylesheet" href="./assets/styles/contact.css" />
     <link rel="stylesheet" href="./assets/styles/product.css" />
     <link rel="stylesheet" href="./assets/styles/login-form.css" />
     <link rel="stylesheet" href="./assets/styles/sign-up.css" />
@@ -42,8 +43,15 @@
                 title="Close Modal"
                 >&times;</span
               >
+
               <div class="align-items"></div>
             </div>
+            <div class="cart-total">
+              <h3>Total:</h3>
+            </div>
+            <button class="cart-button">
+              Check out <i class="fa fa-shopping-bag"></i>
+            </button>
           </div>
         </div>
         <li
@@ -176,18 +184,52 @@
     <footer class="foot">
       <div class="container">
         <h1>Lonely Fans</h1>
+        <h2>About</h2>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis
-          animi ipsam inventore id facilis fugit unde quibusdam, error enim
-          pariatur vero tenetur porro, repellat quos veniam eaque explicabo ex
-          voluptate.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta
+          debitis soluta expedita, sunt iusto saepe repellendus eius natus!
+          Facilis consequatur pariatur perferendis necessitatibus laudantium
+          assumenda quae minus deleniti obcaecati.
         </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta
-          quibusdam dolor enim, debitis cum tempora accusamus eveniet ea sit
-          similique dolores necessitatibus, quisquam aliquam temporibus ratione
-          fugit animi ipsa possimus!
-        </p>
+        <div class="coninfo">
+          <div class="about">
+            <h3>Character representation:</h3>
+            <ul>
+              <li>Winnie the pooh: Impulsive Eating Disorder</li>
+              <li>Piglet: Generalized Anxiety Disorder</li>
+              <li>Eeyore: Depressive Disorder</li>
+              <li>Rabbit: Obsessive Compulsive Disorder (OCD)</li>
+              <li>Owl: Dyslexia and Narcissistis Disorder</li>
+              <li>Tigger: Attention Deficit Hyperactivity Disorder (ADHD)</li>
+              <li>Kanga: Social Anxiety Disorder</li>
+              <li>Roo: Autism Spectrum Disorder</li>
+              <li>Christopher Robin: Schizophrenia</li>
+              <li>Scar: Anti-social Personality Disorder</li>
+              <li>Charlie Brown: Avoident Personality Disorder</li>
+              <li>SpongeBob Squarepants: Williams-Beuren Syndrome</li>
+              <li>Donald Duck: PTSD</li>
+              <li>Anna: Attention Deficit Hyperactivity Disorder (ADHD)</li>
+              <li>Jasmine: Bipolar Disorder</li>
+            </ul>
+          </div>
+          <form
+            class="contact-form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+          >
+            <div class="input-fields">
+              <input type="text" class="input" placeholder="Name" />
+              <input type="text" class="input" placeholder="Email Address" />
+              <input type="text" class="input" placeholder="Phone" />
+              <input type="text" class="input" placeholder="Subject" />
+            </div>
+            <div class="msg">
+              <textarea placeholder="Message"></textarea>
+              <button class="btn">send</button>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
     <script src="./assets/scripts/cart.js"></script>

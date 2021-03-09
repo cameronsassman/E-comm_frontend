@@ -24,7 +24,7 @@ function createtr(product) {
     <td>${product.image}</td>
     <td>
       <a
-        href="http://127.0.0.1:5000/show-records/${product.id}/"
+        href="https://limitless-basin-17095.herokuapp.com/show-records/${product.id}/"
         >Delete</a
       >
     </td>

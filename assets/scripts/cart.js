@@ -16,7 +16,7 @@ function add(prdct) {
   let cart = localStorage.getItem("cart");
   let cartList = JSON.parse(cart);
   console.log(cartList);
-  cart ? cart : (cartList = []);
+  cart ? cart : (cartList = [0]);
   console.log(cartList);
   document.getElementById("amount").innerHTML = cartList.length;
   cartList.push(prdct);
@@ -62,6 +62,7 @@ function renderCart() {
         let cartItem = createCartItem(item);
         document.getElementById("cartContainer").innerHTML += cartItem;
       });
+      calcTotal();
       // console.log(cartItems);
     });
 }
@@ -73,12 +74,29 @@ function createCartItem(prdct) {
                 class="close-cart"
                 title="Close Modal"
                 >&times;</span
-              >
-  <div class="align-items">
+              >           
+  <div class="align-items" id="totalProduct${prdct.id}" product-price=${prdct.price}>
   <img src=${prdct.image} />
           <div class="cart-info">
             <h2>${prdct.name}</h2>
             <p>${prdct.price}</p>
             </div>
-            </div>`;
+            </div>
+            `;
+}
+
+function calcTotal() {
+  // Get all elements with product-price attribute
+  let products = document.querySelectorAll("[product-price]");
+  let totalPrice = 0;
+  for (let i = 0; i < products.length; i++) {
+    totalPrice += parseInt(
+      products[i].getAttribute("product-price").substring(1)
+    );
+  }
+
+  console.log(totalPrice);
+  let productTotal = document.getElementsByClassName("cart-total")[0];
+
+  productTotal.innerHTML += totalPrice;
 }

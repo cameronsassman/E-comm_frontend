@@ -18,6 +18,17 @@ function loginForm() {
       });
       alert("successfully logged in");
       console.log(json);
-      lform.reset();
+      // lform.reset();
+      if (loggedin.length >= 1) {
+        localStorage.setItem("user-logged", JSON.stringify(username, password));
+        window.location.href = `./index.html`;
+        console.log("worked");
+      }
     });
+}
+
+function out() {
+  localStorage.removeItem("user-logged");
+  alert("See you again");
+  window.location.href = `./index.html`;
 }

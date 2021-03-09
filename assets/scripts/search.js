@@ -7,10 +7,9 @@ fetch("https://limitless-basin-17095.herokuapp.com/show-records/")
 .then((json) => {
   console.log(json);
   console.log(search);
-  let matchedSearch = json.filter((data) => {
-    return data.title == search;
-  });
-  document.getElementById("blog-items").innerHTML = "";
-  matchedSearch.forEach((blog) => createBlogItem(blog));
-});
-}
+  if (search) {
+      let matchedSearch = json.filter((searchProduct) => {
+          return searchProduct.character == search;
+      });
+      document.getElementById("")
+  }

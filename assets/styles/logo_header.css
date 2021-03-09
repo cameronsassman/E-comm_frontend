@@ -24,7 +24,7 @@ body {
 .logocontainer {
   background-image: url(../images/logo.png);
   background-position: center 15%;
-  background-size: 80%;
+  background-size: 90%;
 }
 
 .logocontainer > img {
@@ -80,7 +80,7 @@ body {
   }
   #amount {
     top: 2px;
-    right: 68px;
+    right: 33px;
     height: 12px;
     width: 12px;
     padding: 1px;
