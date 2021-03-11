@@ -13,15 +13,22 @@ let cartList = [];
 i = 0;
 
 function add(prdct) {
-  let cart = localStorage.getItem("cart");
-  let cartList = JSON.parse(cart);
-  console.log(cartList);
-  cart ? cart : (cartList = [0]);
-  console.log(cartList);
-  document.getElementById("amount").innerHTML = cartList.length;
-  cartList.push(prdct);
-  console.log(cartList);
-  localStorage.setItem("cart", JSON.stringify(cartList));
+  let cart = JSON.parse(localStorage.getItem("cart"));
+  cart ? cart : (cart = [0]);
+
+  fetch("https://limitless-basin-17095.herokuapp.com/show-records/")
+    .then((res) => res.json())
+    .then((data) => {
+      let selectedItem = data.filter((product) => {
+        return product.id == prdct;
+      });
+      console.log(selectedItem[0]);
+      cart.push(selectedItem[0]);
+
+      if (selectedItem.length > 0) {
+        localStorage.setItem("cart", JSON.stringify(cart));
+      }
+    });
   createCart();
 }
 
@@ -30,7 +37,9 @@ function createCart() {
   products = [];
 
   let cart = localStorage.getItem("cart");
-
+  document.getElementById("amount").innerHTML = JSON.parse(
+    localStorage.getItem("cart")
+  ).length;
   console.log("Your cart has these: ", JSON.parse(cart));
 }
 
@@ -40,6 +49,7 @@ function showCart() {
 
 function renderCart() {
   let cart = JSON.parse(localStorage.getItem("cart"));
+  cart ? cart : (cart = []);
 
   fetch("https://limitless-basin-17095.herokuapp.com/show-records/")
     .then((res) => res.json())
@@ -50,7 +60,7 @@ function renderCart() {
 
       data.forEach((dataItem) => {
         cart.forEach((cartItem) => {
-          if (dataItem.id == cartItem) {
+          if (dataItem.id == cartItem.id) {
             cartItems.push(dataItem);
           }
         });
@@ -80,6 +90,7 @@ function createCartItem(prdct) {
           <div class="cart-info">
             <h2>${prdct.name}</h2>
             <p>${prdct.price}</p>
+            <button onclick="removeProduct(${prdct.id})">remove</button>
             </div>
             </div>
             `;
@@ -99,4 +110,54 @@ function calcTotal() {
   let productTotal = document.getElementsByClassName("cart-total")[0];
 
   productTotal.innerHTML += totalPrice;
+}
+
+function removeProduct(id) {
+  let cart = JSON.parse(localStorage.getItem("cart"));
+  cart ? cart : (cart = []);
+  console.log(cart);
+  fetch("https://limitless-basin-17095.herokuapp.com/show-records/")
+    .then((res) => res.json())
+    .then((data) => {
+      let cartMinusItem = data.filter((product) => {
+        return product.id == id;
+      });
+      console.log(cartMinusItem);
+      let newCart = cart.filter((product) => {
+        return !deepEqual(product, cartMinusItem[0]);
+      });
+      console.log(newCart);
+      localStorage.setItem("cart", JSON.stringify(newCart));
+      console.log(JSON.parse(localStorage.getItem("cart")));
+      window.location.reload();
+    });
+
+  renderCart();
+}
+
+function deepEqual(product, cartMinusItem) {
+  const keys1 = Object.keys(product);
+  const keys2 = Object.keys(cartMinusItem);
+
+  if (keys1.length !== keys2.length) {
+    return false;
+  }
+
+  for (const key of keys1) {
+    const val1 = product[key];
+    const val2 = cartMinusItem[key];
+    const areObjects = isObject(val1) && isObject(val2);
+    if (
+      (areObjects && !deepEqual(val1, val2)) ||
+      (!areObjects && val1 !== val2)
+    ) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function isObject(object) {
+  return object != null && typeof object === "object";
 }

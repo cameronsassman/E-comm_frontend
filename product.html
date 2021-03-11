@@ -219,14 +219,29 @@
             data-netlify="true"
           >
             <div class="input-fields">
-              <input type="text" class="input" placeholder="Name" />
-              <input type="text" class="input" placeholder="Email Address" />
-              <input type="text" class="input" placeholder="Phone" />
-              <input type="text" class="input" placeholder="Subject" />
+              <input type="text" name="Name" class="input" placeholder="Name" />
+              <input
+                type="text"
+                name="email"
+                class="input"
+                placeholder="Email Address"
+              />
+              <input
+                type="text"
+                name="phone"
+                class="input"
+                placeholder="Phone"
+              />
+              <input
+                type="text"
+                name="subject"
+                class="input"
+                placeholder="Subject"
+              />
             </div>
             <div class="msg">
-              <textarea placeholder="Message"></textarea>
-              <button class="btn">send</button>
+              <textarea placeholder="Message" name="message"></textarea>
+              <button class="btn" type="submit">send</button>
             </div>
           </form>
         </div>
