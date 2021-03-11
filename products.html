@@ -268,13 +268,28 @@
             method="POST"
           >
             <div class="input-fields">
-              <input type="text" class="input" placeholder="Name" />
-              <input type="text" class="input" placeholder="Email Address" />
-              <input type="text" class="input" placeholder="Phone" />
-              <input type="text" class="input" placeholder="Subject" />
+              <input type="text" class="input" placeholder="Name" name="name" />
+              <input
+                type="text"
+                class="input"
+                placeholder="Email Address"
+                name="email"
+              />
+              <input
+                type="text"
+                class="input"
+                placeholder="Phone"
+                name="number"
+              />
+              <input
+                type="text"
+                class="input"
+                placeholder="Subject"
+                name="subject"
+              />
               <div class="msg">
-                <textarea placeholder="Message"></textarea>
-                <button class="btn">send</button>
+                <textarea placeholder="Message" name="message"></textarea>
+                <button class="btn" type="submit" name="submit">send</button>
               </div>
             </div>
           </form>
