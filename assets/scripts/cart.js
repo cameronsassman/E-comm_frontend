@@ -56,6 +56,7 @@ function renderCart() {
     .then((data) => {
       console.log(data);
       console.log(cart);
+
       let cartItems = [];
 
       data.forEach((dataItem) => {
@@ -160,4 +161,10 @@ function deepEqual(product, cartMinusItem) {
 
 function isObject(object) {
   return object != null && typeof object === "object";
+}
+
+function deleteItem() {
+  window.localStorage.clear();
+  alert("Thank you for your purchase");
+  window.location.reload();
 }

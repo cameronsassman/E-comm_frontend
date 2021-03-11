@@ -36,20 +36,19 @@
         </li>
         <div class="cartt" id="cart01">
           <div class="cart-content">
+            <span
+              onclick="document.getElementById('cart01').style.display='none'"
+              class="close-cart"
+              title="Close Modal"
+              >&times;</span
+            >
             <div class="cart-container" id="cartContainer">
-              <span
-                onclick="document.getElementById('cart01').style.display='none'"
-                class="close-cart"
-                title="Close Modal"
-                >&times;</span
-              >
-
               <div class="align-items"></div>
             </div>
             <div class="cart-total">
               <h3>Total:</h3>
             </div>
-            <button class="cart-button">
+            <button class="cart-button" onclick="deleteItem()">
               Check out <i class="fa fa-shopping-bag"></i>
             </button>
           </div>
@@ -215,33 +214,18 @@
           <form
             class="contact-form"
             name="contact"
+            action="https://formspree.io/f/xrgonqwj"
             method="POST"
-            data-netlify="true"
           >
             <div class="input-fields">
-              <input type="text" name="Name" class="input" placeholder="Name" />
-              <input
-                type="text"
-                name="email"
-                class="input"
-                placeholder="Email Address"
-              />
-              <input
-                type="text"
-                name="phone"
-                class="input"
-                placeholder="Phone"
-              />
-              <input
-                type="text"
-                name="subject"
-                class="input"
-                placeholder="Subject"
-              />
-            </div>
-            <div class="msg">
-              <textarea placeholder="Message" name="message"></textarea>
-              <button class="btn" type="submit">send</button>
+              <input type="text" class="input" placeholder="Name" />
+              <input type="text" class="input" placeholder="Email Address" />
+              <input type="text" class="input" placeholder="Phone" />
+              <input type="text" class="input" placeholder="Subject" />
+              <div class="msg">
+                <textarea placeholder="Message"></textarea>
+                <button class="btn">send</button>
+              </div>
             </div>
           </form>
         </div>
