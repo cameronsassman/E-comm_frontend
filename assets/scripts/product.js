@@ -5,6 +5,7 @@ const params = new URLSearchParams(window.location.search);
 const product_item = document.getElementById("product-item");
 
 if (params.has("productID")) {
+  // fetching products from database
   fetch(
     `https://limitless-basin-17095.herokuapp.com/show-record-item/${params.get(
       "productID"

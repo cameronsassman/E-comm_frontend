@@ -6,7 +6,7 @@
 body {
   scroll-behavior: smooth;
 }
-
+/* cart amount */
 #amount {
   position: absolute;
   top: 10px;
@@ -20,7 +20,7 @@ body {
   font-size: 12px;
   border-radius: 120px;
 }
-
+/* logo header image */
 .logocontainer {
   background-image: url(../images/logo.png);
   background-position: center 15%;
@@ -48,7 +48,7 @@ body {
   height: 75%;
   width: 100%;
 }
-
+/* link colours */
 .icontop a:link {
   color: rgb(255, 255, 255);
   background-color: transparent;

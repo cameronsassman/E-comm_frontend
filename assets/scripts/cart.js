@@ -4,14 +4,16 @@ const cart = document.getElementById("cart01");
 let cartList = [];
 
 i = 0;
-
+// add product
 function add(prdct) {
+  // using local storage
   let cart = JSON.parse(localStorage.getItem("cart"));
   cart ? cart : (cart = [0]);
-
+  // getting products from database
   fetch("https://limitless-basin-17095.herokuapp.com/show-records/")
     .then((res) => res.json())
     .then((data) => {
+      // filtering selected items
       let selectedItem = data.filter((product) => {
         return product.id == prdct;
       });
@@ -24,7 +26,7 @@ function add(prdct) {
     });
   createCart();
 }
-
+// creating cart items
 function createCart() {
   let cartItems = document.getElementById("cartItem");
   products = [];
@@ -70,7 +72,7 @@ function renderCart() {
       // console.log(cartItems);
     });
 }
-
+// displaying cart data in html format
 function createCartItem(prdct) {
   return `
   <span
@@ -89,7 +91,7 @@ function createCartItem(prdct) {
             </div>
             `;
 }
-
+// calculating the total price of products
 function calcTotal() {
   // Get all elements with product-price attribute
   let products = document.querySelectorAll("[product-price]");
@@ -105,7 +107,7 @@ function calcTotal() {
 
   productTotal.innerHTML += totalPrice;
 }
-
+// removing products
 function removeProduct(id) {
   let cart = JSON.parse(localStorage.getItem("cart"));
   cart ? cart : (cart = []);
@@ -113,6 +115,7 @@ function removeProduct(id) {
   fetch("https://limitless-basin-17095.herokuapp.com/show-records/")
     .then((res) => res.json())
     .then((data) => {
+      // removing products by its id
       let cartMinusItem = data.filter((product) => {
         return product.id == id;
       });
@@ -155,7 +158,7 @@ function deepEqual(product, cartMinusItem) {
 function isObject(object) {
   return object != null && typeof object === "object";
 }
-
+// checkout clears cart and refreshes page
 function deleteItem() {
   window.localStorage.clear();
   alert("Thank you for your purchase");
