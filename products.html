@@ -32,15 +32,18 @@
           class="icontop"
           onclick="document.getElementById('cart01').style.display='block'; renderCart()"
         >
+          <!-- cart icon -->
           <a href="#"
-            ><i class="fa fa-shopping-cart"
-              ><label class="number" id="amount">0</label></i
+            ><i class="fa fa-shopping-cart">
+              <!-- cart total -->
+              <label class="number" id="amount">0</label></i
             ></a
           >
         </li>
         <!-- view cart modal -->
         <div class="cartt" id="cart01">
           <div class="cart-content">
+            <!-- close cart modal (x) -->
             <span
               onclick="document.getElementById('cart01').style.display='none'"
               class="close-cart"
@@ -50,18 +53,22 @@
             <div class="cart-container" id="cartContainer">
               <div class="align-items"></div>
             </div>
+            <!-- total  in cart -->
             <div class="cart-total">
               <h3>Total:</h3>
             </div>
+            <!-- checkout cart items -->
             <button class="cart-button" onclick="deleteItem()">
               Check out <i class="fa fa-shopping-bag"></i>
             </button>
           </div>
         </div>
+        <!-- onclick to view user modal -->
         <li
           class="icontop"
           onclick="document.getElementById('id01').style.display='block'"
         >
+          <!-- user icon -->
           <i class="fa fa-user"></i>
         </li>
         <!-- user login sign up -->
@@ -72,12 +79,14 @@
             onsubmit="event.preventDefault(); loginForm()"
           >
             <div class="login-container">
+              <!-- close user modal -->
               <span
                 onclick="document.getElementById('id01').style.display='none'"
                 class="close"
                 title="Close Modal"
                 >&times;</span
               >
+              <!-- inputs to login -->
               <label for="uname"><b>Username</b></label>
               <input type="text" placeholder="Enter Username" name="username" />
 
@@ -87,8 +96,9 @@
                 placeholder="Enter Password"
                 name="password"
               />
-
+              <!-- login in button -->
               <button type="submit" class="bttn">Login</button>
+              <!-- signup button modal -->
               <button
                 class="bttnsu"
                 onclick="document.getElementById('su01').style.display='block'"
@@ -96,6 +106,7 @@
               >
                 Sign up
               </button>
+              <!-- signout button -->
               <button onclick="out()" class="bttn">Sign out</button>
             </div>
           </form>
@@ -105,12 +116,14 @@
               onsubmit="event.preventDefault(); createAccount()"
             >
               <div class="signup-container">
+                <!-- close signup modal -->
                 <span
                   onclick="document.getElementById('su01').style.display='none'"
                   class="closesu"
                   title="Close Modal"
                   >&times;</span
                 >
+                <!-- signup inputs -->
                 <label for="name"><b>Name</b></label>
                 <input
                   type="text"
@@ -135,7 +148,7 @@
                   placeholder="Enter Password"
                   name="password"
                 />
-
+                <!-- signup/add to database-->
                 <button type="submit" class="bttnsu">Sign up</button>
               </div>
             </form>
@@ -148,6 +161,7 @@
       <ul class="navbar">
         <li class="nav"><a href="./index.html">Home</a></li>
         <li class="nav"><a href="./products.html">Shop all</a></li>
+        <!-- filter all products by style -->
         <li class="nav">
           <a href="./products.html?category=tshirt">T-shirts</a>
         </li>
@@ -168,14 +182,17 @@
         <div class="filter">
           <div class="side-bar">
             <h2>Filter by</h2>
+            <!-- filter drop downs are collapse (+,-) -->
             <div class="heading">
               <h3>Catagories</h3>
             </div>
+            <!-- filter all products gender -->
             <ul class="catergory">
               <li><a href="./products.html?gender=male">Mens</a></li>
               <li><a href="./products.html?gender=female">Women</a></li>
               <li><a href="./products.html?gender=unisex">Unisex</a></li>
               <li>
+                <!-- filter all products character -->
                 <button type="button" class="collapse">Character</button>
                 <ul>
                   <li>
@@ -218,6 +235,7 @@
               </li>
               <li>
                 <button type="button" class="collapse">Size</button>
+                <!-- filter by size -->
                 <ul>
                   <li class="content">
                     <a href="./products.html?size=s">Small</a>
@@ -236,10 +254,12 @@
         <ul class="card-container" id="cardList"></ul>
       </div>
     </section>
+    <!-- footer -->
     <footer class="foot">
       <div class="container">
         <h1>Lonely Fans</h1>
         <h2>About</h2>
+        <!-- about company -->
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta
           debitis soluta expedita, sunt iusto saepe repellendus eius natus!
@@ -247,6 +267,7 @@
           assumenda quae minus deleniti obcaecati.
         </p>
         <div class="coninfo">
+          <!-- what each character represents -->
           <div class="about">
             <h3>Character representation:</h3>
             <ul>
@@ -267,6 +288,7 @@
               <li>Jasmine: Bipolar Disorder</li>
             </ul>
           </div>
+          <!-- contact form usng formspree -->
           <form
             class="contact-form"
             name="contact"
@@ -302,6 +324,7 @@
         </div>
       </div>
     </footer>
+    <!-- javascript scripts -->
     <script src="./assets/scripts/products.js"></script>
     <script src="./assets/scripts/collapse.js"></script>
     <script src="./assets/scripts/login.js"></script>

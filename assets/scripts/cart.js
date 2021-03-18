@@ -30,14 +30,14 @@ function add(prdct) {
 function createCart() {
   let cartItems = document.getElementById("cartItem");
   products = [];
-
+  // using local storage
   let cart = localStorage.getItem("cart");
   document.getElementById("amount").innerHTML = JSON.parse(
     localStorage.getItem("cart")
   ).length;
   console.log("Your cart has these: ", JSON.parse(cart));
 }
-
+// show cart items
 function showCart() {
   let carted = document.getElementById("cartItem");
 }
@@ -131,7 +131,7 @@ function removeProduct(id) {
 
   renderCart();
 }
-
+// deepequal removing from cart
 function deepEqual(product, cartMinusItem) {
   const keys1 = Object.keys(product);
   const keys2 = Object.keys(cartMinusItem);
